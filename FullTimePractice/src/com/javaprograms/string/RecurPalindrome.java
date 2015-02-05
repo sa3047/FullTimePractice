@@ -8,21 +8,32 @@ public class RecurPalindrome {
 		// check wether string is even or odd
 		if (str.length()%2==0) // even
 		{
+			if (str.length() == 0)
+			{
+				//System.out.println(str.charAt(0));
+				return result = true;
+			}
+			else if (str.charAt(0)==str.charAt(str.length()-1) && str.length() != 0)
+			{
+				System.out.println(str.charAt(0));
+				result = isStrPalindrome(str.substring(1,str.length()-1));
+			}
 			
 		}
 		else //
 		{
 			//check the proper condition 1st
-			if (str.charAt(0)==str.charAt(str.length()-1) && str.length()!= 1)
-			{
-				System.out.println(str.charAt(0));
-				result = isStrPalindrome(str.substring(1,str.length()-1));
-			}
-			else if (str.length() == 1)
+			if (str.length() == 1)
 			{
 				System.out.println(str.charAt(0));
 				return result = true;
 			}
+			else if (str.charAt(0)==str.charAt(str.length()-1) && str.length()!= 1)
+			{
+				System.out.println(str.charAt(0));
+				result = isStrPalindrome(str.substring(1,str.length()-1));
+			}
+			
 		}
 		return result;
 		
@@ -32,14 +43,14 @@ public class RecurPalindrome {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RecurPalindrome obj = new RecurPalindrome();
-		System.out.println(obj.isStrPalindrome("12321"));
-		/*{
-			System.out.println("not a palindrome");
+		if(obj.isStrPalindrome("12321"))
+		{
+			System.out.println("a palindrome");
 		}
 		else
 		{
-			System.out.println("a palindrome");
-		}*/
+			System.out.println("not a palindrome");
+		}
 	}
 
 }
