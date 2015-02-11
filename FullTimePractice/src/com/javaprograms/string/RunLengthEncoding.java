@@ -46,7 +46,7 @@ public class RunLengthEncoding {
 				if(str[i+1]!=str[i])
 				{
 					cntr++;
-					result[cntr]= (char) charCnt;
+					result[cntr]= (char)charCnt;
 					charCnt=0;
 					cntr++;
 					result[cntr]=str[i+1];
@@ -62,7 +62,8 @@ public class RunLengthEncoding {
 		// TODO Auto-generated method stub
 		
 		RunLengthEncoding obj = new RunLengthEncoding();
-		System.out.println(obj.Encoding("aaaabbbffggggggg".toCharArray())); 
+		System.out.println((obj.Encoding("aaaabbbffggggggg".toCharArray()))); 
+
 	}
 
 }
