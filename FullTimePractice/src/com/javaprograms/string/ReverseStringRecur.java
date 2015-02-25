@@ -20,7 +20,7 @@ public class ReverseStringRecur {
 		// TODO Auto-generated method stub
 		
 		ReverseStringRecur obj = new ReverseStringRecur();
-		obj.reverseString("swapnil");
+		obj.reverseString("geeks for geeks");
 		//reverseString("swapnil");
 
 	}
