@@ -10,21 +10,34 @@ public class PrintLeafNodes {
 	{
 		
 		/*  Create following Binary Tree
+	1) Test case 1
         1
       /   \
      2     3
     / \   / \
    5   4 6  7
-          
+   
+   2) Test case 2
+        1
+      /   \
+     2     3
+    / \   / \
+   4   5 6  7
+       \     \
+        8     9
         */
 		
 		Tree root = new Tree(1);
 		root.leftNode= new Tree(2);
 		root.rightNode = new Tree(3);
+		
 		root.leftNode.leftNode= new Tree(4); //
-		root.leftNode.rightNode = new Tree(5); // 
+		root.leftNode.rightNode = new Tree(5); 
 		root.rightNode.leftNode = new Tree(6); //
-		root.rightNode.rightNode =new Tree(7); //
+		root.rightNode.rightNode =new Tree(7);
+		
+		root.leftNode.rightNode.rightNode = new Tree(8);//
+		root.rightNode.rightNode.rightNode =new Tree(9);//
 		
 		String path = "";
 		//path.append("");
@@ -34,6 +47,7 @@ public class PrintLeafNodes {
 	static void recurse(Tree root, String path)
 	{
 		// for each recursive call we are creating a separate path string
+		if(root.data !=null)
 		path = path + root.data;
 		
 		if(root.leftNode == null && root.rightNode==null && root.visited == false)
@@ -45,7 +59,10 @@ public class PrintLeafNodes {
 			
 		else
 		{
-			recurse(root.leftNode,path);			
+			if(root.leftNode!=null) 
+			recurse(root.leftNode,path);	
+			
+			if(root.rightNode!=null) 
 			recurse(root.rightNode,path);
 		}
 			
@@ -56,7 +73,7 @@ public class PrintLeafNodes {
 
 // define the Tree Node class
 class Tree{
-	int data;
+	Integer data;
 	Tree leftNode;
 	Tree rightNode;
 	boolean visited;
