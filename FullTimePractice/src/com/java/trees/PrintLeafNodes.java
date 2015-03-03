@@ -18,13 +18,23 @@ public class PrintLeafNodes {
    5   4 6  7
    
    2) Test case 2
-        1
-      /   \
-     2     3
-    / \   / \
-   4   5 6  7
-       \     \
-        8     9
+         1
+      /  	 \
+     2    	 3
+    / \  	 / \
+   4   5 	6  7
+       \   		\     
+        8  		 9 
+        
+    3) Test case 3
+    
+         1
+      /  	 \
+     2    	 3
+    / \  	 / \
+   4   5 	6  7
+       \   /     
+        8  9                  
         */
 		
 		Tree root = new Tree(1);
@@ -37,7 +47,7 @@ public class PrintLeafNodes {
 		root.rightNode.rightNode =new Tree(7);
 		
 		root.leftNode.rightNode.rightNode = new Tree(8);//
-		root.rightNode.rightNode.rightNode =new Tree(9);//
+		root.rightNode.leftNode.leftNode =new Tree(9);//
 		
 		String path = "";
 		//path.append("");
@@ -59,7 +69,7 @@ public class PrintLeafNodes {
 			
 		else
 		{
-			if(root.leftNode!=null) 
+			if(root.leftNode!=null) //don't recurse on left if node is not present e.g. Node 5
 			recurse(root.leftNode,path);	
 			
 			if(root.rightNode!=null) 
