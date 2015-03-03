@@ -29,3 +29,4 @@ class Ford extends Car
 		maxSpeed=100;
 	}
 }
+
