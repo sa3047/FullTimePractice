@@ -15,8 +15,10 @@ public class PrintLeafNodes {
 		Tree root = new Tree(1);
 		root.leftNode= new Tree(2);
 		root.rightNode = new Tree(3);
-		root.leftNode.leftNode= new Tree(4);
-		root.leftNode.rightNode = new Tree(5);
+		root.leftNode.leftNode= new Tree(4); //
+		root.leftNode.rightNode = new Tree(5); // 
+		root.rightNode.leftNode = new Tree(6); //
+		root.rightNode.rightNode =new Tree(7); //
 		
 		String path = "";
 		//path.append("");
@@ -25,10 +27,7 @@ public class PrintLeafNodes {
 
 	static void recurse(Tree root, String path)
 	{
-		//Stack<Integer> storeLength = new Stack<Integer>();
-		//StringBuilder pathString =path;
-		
-		//path.append(root.data);
+		// for each recursive call we are creating a separate path string
 		path = path + root.data;
 		
 		if(root.leftNode == null && root.rightNode==null && root.visited == false)
@@ -40,11 +39,7 @@ public class PrintLeafNodes {
 			
 		else
 		{
-			recurse(root.leftNode,path);
-			//path.deleteCharAt(path.length()-1);
-			//path.append( path.substring(0, ));
-			
-			
+			recurse(root.leftNode,path);			
 			recurse(root.rightNode,path);
 		}
 			
