@@ -1,16 +1,22 @@
 package com.java.trees;
-import java.util.Stack;
-
 
 //@Author : Swapnil Aher
 //@Date : 3 march 2015
-// This program will print all leaf nodes of a tree
+// This program will print path for all leaf nodes from root of a tree
 
 public class PrintLeafNodes {
 	
 	public static void main(String[] args)
 	{
-		// create a tree using node
+		
+		/*  Create following Binary Tree
+        1
+      /   \
+     2     3
+    / \   / \
+   5   4 6  7
+          
+        */
 		
 		Tree root = new Tree(1);
 		root.leftNode= new Tree(2);
