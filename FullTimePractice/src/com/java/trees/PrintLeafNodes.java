@@ -34,7 +34,8 @@ public class PrintLeafNodes {
     / \  	 / \
    4   5 	6  7
        \   /     
-        8  9                  
+        8  9  
+                        
         */
 		
 		Tree root = new Tree(1);
@@ -52,6 +53,8 @@ public class PrintLeafNodes {
 		String path = "";
 		//path.append("");
 		recurse(root,path);
+		
+		
 	}
 
 	static void recurse(Tree root, String path)
@@ -60,6 +63,8 @@ public class PrintLeafNodes {
 		if(root.data !=null)
 		path = path + root.data;
 		
+		//base condition
+		// Going into Leaf node
 		if(root.leftNode == null && root.rightNode==null && root.visited == false)
 		{
 			System.out.println(path.toString());
@@ -69,14 +74,15 @@ public class PrintLeafNodes {
 			
 		else
 		{
-			if(root.leftNode!=null) //don't recurse on left if node is not present e.g. Node 5
+			if(root.leftNode!=null) //don't recurse on left if node is not present e.g. Node 6
 			recurse(root.leftNode,path);	
 			
-			if(root.rightNode!=null) 
+			if(root.rightNode!=null) //don't recurse on right if node is not present e.g. Node 5
 			recurse(root.rightNode,path);
 		}
 			
 	}
+	
 	
 }
 
