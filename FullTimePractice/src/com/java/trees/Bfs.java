@@ -85,15 +85,3 @@ public class Bfs {
 }
 
 
-class TreeNode
-{
-	Integer data;
-	TreeNode leftNode;
-	TreeNode rightNode;
-	
-	public TreeNode(Integer data)
-	{
-		this.data = data;
-	}
-	
-}
