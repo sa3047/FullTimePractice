@@ -34,7 +34,7 @@ public class ChildSumOfTree {
 				root.rightNode = new Node(4);
 				
 				root.leftNode.leftNode= new Node(3); //
-				root.leftNode.rightNode = new Node(5); 
+				root.leftNode.rightNode = new Node(2); 
 				
 				root.rightNode.leftNode = new Node(2); //
 				root.rightNode.rightNode =new Node(2);
