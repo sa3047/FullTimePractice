@@ -45,11 +45,11 @@ public class ChildSumOfTree {
 				
 				if(mCheckSum(root))
 				{
-					System.out.println("All parents have value equals to sum of its child node");
+					System.out.println("Given tree satisfies the child sum property");
 				}
 				else
 				{
-					System.out.println("Parent node does not have value equals to its child nodes");
+					System.out.println("Given tree does not satisfies the child sum property");
 				}
 	
 	}
