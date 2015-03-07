@@ -23,7 +23,16 @@ public class InorderTraversalWithoutRecursion {
 	    / \  	 / \
 	   3   5 	2   2
 	       \    /
-	        5   3           
+	        5   3    
+	        
+	    2) Test Case 2
+	    
+	         12
+	      /  	 \
+	     8    	  4
+	    / \  	 / \
+	   3   5 	2   2
+	           
 	 */
 		clsTree root = new clsTree(12);
 		root.leftNode= new clsTree(8);
@@ -35,8 +44,8 @@ public class InorderTraversalWithoutRecursion {
 		root.rightNode.leftNode = new clsTree(2); //
 		root.rightNode.rightNode =new clsTree(2);
 		
-		root.leftNode.rightNode.rightNode = new clsTree(5);//
-		root.rightNode.leftNode.leftNode =new clsTree(3);//
+		//root.leftNode.rightNode.rightNode = new clsTree(5);//
+		//root.rightNode.leftNode.leftNode =new clsTree(3);//
 		
 		inorderTraversal(root);
 			
