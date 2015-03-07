@@ -25,42 +25,70 @@ public class InorderTraversalWithoutRecursion {
 	       \    /
 	        5   3           
 	 */
-		TreeNode root = new TreeNode(12);
-		root.leftNode= new TreeNode(8);
-		root.rightNode = new TreeNode(4);
+		clsTree root = new clsTree(12);
+		root.leftNode= new clsTree(8);
+		root.rightNode = new clsTree(4);
 		
-		root.leftNode.leftNode= new TreeNode(3); //
-		root.leftNode.rightNode = new TreeNode(5); 
+		root.leftNode.leftNode= new clsTree(3); //
+		root.leftNode.rightNode = new clsTree(5); 
 		
-		root.rightNode.leftNode = new TreeNode(2); //
-		root.rightNode.rightNode =new TreeNode(2);
+		root.rightNode.leftNode = new clsTree(2); //
+		root.rightNode.rightNode =new clsTree(2);
 		
-		root.leftNode.rightNode.rightNode = new TreeNode(5);//
-		root.rightNode.leftNode.leftNode =new TreeNode(3);//
+		root.leftNode.rightNode.rightNode = new clsTree(5);//
+		root.rightNode.leftNode.leftNode =new clsTree(3);//
+		
+		inorderTraversal(root);
 			
 	}
-	void inorderTraversal(TreeNode node)
+	static void inorderTraversal(clsTree node)
 	{
-		TreeNode current = null;
-		Stack<TreeNode> st = new Stack<TreeNode>();
+		clsTree current = null;
+		clsTree popNode =null;
+		Stack<clsTree> st = new Stack<clsTree>();
 		current = node;
 		
-		search:
-		while(true)
-		{
-			if (current.leftNode!= null & !st.isEmpty())
-			{
-				//push it on stack
-				st.push(current);
-				current = current.leftNode;
-			}
-			else if(current == null & !st.isEmpty())
-			{
-				System.out.println(st.pop().data);
-				current = current.rightNode;
-				break search;
-			}
+	    
 			
-		}
+				while(true)
+				{
+					if (current != null )
+					{
+						//push it on stack
+						st.push(current);
+						current = current.leftNode;
+					}
+					else if(current == null & !st.isEmpty())
+					{
+						popNode= st.pop();
+						System.out.println(popNode.data);
+						
+						current = popNode.rightNode;
+						continue ;
+					}
+					else if (current ==null & st.isEmpty())
+					{
+						break;
+					}
+					
+				}
+		
+		
+		
 	}
+}
+
+class clsTree
+{
+	Integer data;
+	clsTree leftNode;
+	clsTree rightNode;
+	
+	public clsTree(Integer data)
+	{
+		this.data = data;
+		leftNode =null;
+		rightNode = null;
+	}
+	
 }
