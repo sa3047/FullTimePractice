@@ -31,7 +31,7 @@ public class SumEqualGivenNumber {
 			root.leftNode.rightNode.rightNode = new TreeNode(5);//
 			root.rightNode.leftNode.leftNode =new TreeNode(3);//
 			
-			sumEqToNumber(root, 300, 0);
+			sumEqToNumber(root, 18, 0);
 	}
 	
 	
