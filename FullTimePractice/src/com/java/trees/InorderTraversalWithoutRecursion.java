@@ -5,8 +5,12 @@ import java.util.Stack;
 /*@author: Swapnil Aher
  *@date: 3/6/2015
  *@purpose: Inorder Traversal using stack with recursion
- *@Algorithm:
- *1) 
+ *@Algorithm: 
+ *1) Current Node is not null then push the node to stack
+ *2) if current is null and stack is not empty push the node from stack
+ *    current = pop.rightNode
+ *    goto step 1
+ *3) if current is null and stack is empty then break the loop 
  */
 public class InorderTraversalWithoutRecursion {
 
