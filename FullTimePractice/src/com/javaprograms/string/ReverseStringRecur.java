@@ -5,23 +5,29 @@ package com.javaprograms.string;
  *@purpose: Recursive function to reverse the string
  * */
 public class ReverseStringRecur {
-
-
-	public void reverseString(String str)
+  static int len =0;
+  static int cnt=0;
+	public void reverseString(char[] str)
 	{		
-		if(str.length()!=0)
+		if(cnt !=str.length)
 		{
-			System.out.print(str.charAt(str.length()-1));
-			reverseString(str.substring(0, str.length()-1));
+			cnt++;
+			reverseString(str);
+			
 		}
+		len--;
+		
+		if(len>=0)
+		System.out.print(str[len]);
 		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ReverseStringRecur obj = new ReverseStringRecur();
-		obj.reverseString("geeks for geeks");
-		//reverseString("swapnil");
+		String input ="geeks for geeks";
+		len=input.length();
+		obj.reverseString(input.toCharArray());
 
 	}
 
