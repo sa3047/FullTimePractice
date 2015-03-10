@@ -1,5 +1,9 @@
 package com.javaprograms.string;
 
+/*@author : Swapnil Aher
+ *@Date: 3/10/2015
+ *@purpose: Recursive function to reverse the string
+ * */
 public class ReverseStringRecur {
 
 
@@ -11,10 +15,6 @@ public class ReverseStringRecur {
 			reverseString(str.substring(0, str.length()-1));
 		}
 		
-		/*for(int i=temp.length-1;i>=0;i--)
-		{
-			System.out.println(temp[i]);
-		}*/
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
