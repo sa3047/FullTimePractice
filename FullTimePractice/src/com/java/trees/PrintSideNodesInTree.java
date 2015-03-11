@@ -41,8 +41,8 @@ public class PrintSideNodesInTree {
 			root.leftNode.rightNode.rightNode = new Node(5);//
 			root.rightNode.leftNode.leftNode =new Node(3);//
 			
-			//root.leftNode.leftNode.leftNode = new Node(2);
-			//root.rightNode.rightNode.rightNode = new Node(6);
+			root.leftNode.leftNode.leftNode = new Node(2);
+			root.rightNode.rightNode.rightNode = new Node(6);
 			
 			statRefRoot= root;
 			left=true;
@@ -70,6 +70,7 @@ public class PrintSideNodesInTree {
 	    		
     	}
     	
+    	//backtracking postion
         if (node == statRefRoot || right==true)
     	{
     		if(node == statRefRoot)
