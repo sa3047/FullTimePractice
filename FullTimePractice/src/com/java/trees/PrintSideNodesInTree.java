@@ -24,7 +24,16 @@ public class PrintSideNodesInTree {
 			    / \  	 / \
 			   3   5 	2   2
 			  /    \   /     \
-			 2      5 3       6 
+			 2      5 3       6
+			 
+		 2) Test case 2     
+		             12
+			      /  	 \
+			     8    	  4
+			    / \  	 / \
+			   3   5 	2   2
+			       \         \
+			        5         6
 		     
 		 */
 			
