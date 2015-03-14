@@ -10,8 +10,11 @@ public class SecondMaxInArray {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//test case 1
+		//int[] arr = {6,5,8,9,1,3};
 		
-		int[] arr = {6,5,8,9,1,3};
+		//test case 2
+		int[] arr = {12, 13, 1, 10, 34, 1};
 		
 		find2ndMax(arr);
 
