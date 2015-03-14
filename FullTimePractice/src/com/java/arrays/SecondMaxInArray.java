@@ -23,22 +23,28 @@ public class SecondMaxInArray {
 
 	 static void find2ndMax(int[] arr) {
 		// TODO Auto-generated method stub
-	
-		 for(int i=0;i<=arr.length-1;i++)
-		 {
-			 if(arr[i]>_1stMaxNum)
+	 try {
+		 
+			 for(int i=0;i<=arr.length-1;i++)
 			 {
-				 _2ndMaxNum = _1stMaxNum;
-				 _1stMaxNum=arr[i];
-				
+				 if(arr[i]>_1stMaxNum)
+				 {
+					 _2ndMaxNum = _1stMaxNum;
+					 _1stMaxNum=arr[i];
+					
+				 }
+				 if(  arr[i] > _2ndMaxNum  & arr[i]!=_1stMaxNum)
+					 _2ndMaxNum= arr[i];
 			 }
-			 if(  arr[i] > _2ndMaxNum  & arr[i]!=_1stMaxNum)
-				 _2ndMaxNum= arr[i];
-		 }
-		 
-		 
+			 
 		 
 		 System.out.println("2nd Max element in array " +_2ndMaxNum);
+		 
+		 
+	} catch (Exception e) {
+		// TODO: handle exception
+	}
+		 
 		 
 	}
 
