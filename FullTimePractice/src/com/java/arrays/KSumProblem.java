@@ -11,16 +11,17 @@ import java.util.HashSet;
 public class KSumProblem {
 
 	public static void main(String[] args){
-		//int[] ip ={1,5,9,25,16,8,10};
-		int sum = 6;
+		//first test case {1,5,9,25,16,8,10};
+		//second test case
+		int sum = 13;
 		HashSet<Integer> ip = new HashSet<Integer>();
 		ip.add(1);
-		ip.add(5);
-		ip.add(9);
-		ip.add(25);
-		ip.add(16);
-		ip.add(6);
+		ip.add(3);
 		ip.add(10);
+		ip.add(7);
+		ip.add(3);
+		ip.add(6);
+		//ip.add(10);
 		
 		getPairs(ip,sum);
 	}
