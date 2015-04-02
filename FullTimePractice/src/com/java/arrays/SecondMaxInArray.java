@@ -6,6 +6,7 @@ package com.java.arrays;
  * */
 
 public class SecondMaxInArray {
+	
 	static int _1stMaxNum =Integer.MIN_VALUE;
 	static int _2ndMaxNum =Integer.MIN_VALUE;
 	
